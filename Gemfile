@@ -16,8 +16,6 @@ gem 'sassc-rails'
 
 gem 'commontator'
 
-gem 'wdm', '>= 0.1.0'
-
 gem 'will_paginate', '~> 3.1.1'
 
 gem 'will_paginate-bootstrap'
@@ -35,6 +33,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+require 'rbconfig'
+gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Active Storage variant
