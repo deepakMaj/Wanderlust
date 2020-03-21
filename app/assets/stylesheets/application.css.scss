@@ -19,13 +19,13 @@
  @import 'font-awesome';
 
  body{
-   background: image-url(travel.jpeg);
+   background-image: url(travel.jpeg);
    background-repeat: no-repeat;
    background-size: cover;
  }
 
  .myself{
-   background: image-url(me.jpg);
+   background-image: url(me.jpg);
  }
 
  #page-container {
