@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require commontator/application
+ *= require unobtrusive_flash_ui
+ */
+
+ @import 'font-awesome';
+
+ body{
+   background-image: url(travel.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .myself{
+   background-image: url(me.jpg);
+ }
+
+ #page-container {
+   position: relative;
+   min-height: 100vh;
+ }
+
+ .change{
+   font-family: sans-serif;
+   font-size: 14px;
+ }
+
+ #content-wrap {
+   padding-bottom: 2.5rem;    /* Footer height */
+ }
+
+ #footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+ }
+
+ .pagination a:hover {
+     color: black;
+ }
+
+.pagination .current {
+    color: black;
+    text-shadow: 1px 1px 1px #171717;
+}
+
+#notice_wrapper{
+    width: 50%;
+    border-radius: 6px;
+    margin-left: 330px;
+    border-style: inset;
+    background: rgba(95, 167, 163, 0.85);
+    padding: 1.25rem 0;
+    p{
+      text-align: center;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+  }
+
+  #alert_wrapper{
+      width: 50%;
+      border-radius: 6px;
+      margin-left: 330px;
+      border-style: inset;
+      background: rgba(95, 167, 163, 0.85);
+      padding: 1.25rem 0;
+      p{
+        text-align: center;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+        color: #FFFFFF;
+        letter-spacing: 1px;
+      }
+    }

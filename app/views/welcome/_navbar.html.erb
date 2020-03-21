@@ -1,0 +1,23 @@
+<nav class="md:flex items-center justify-between flex-wrap  p-6">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+    <span class="font-semibold font-sans font-bold text-2xl text-2xl tracking-tight mr-12">Wanderlust</span>
+    <div class="text-base font-semibold">
+      <%= link_to "Adventure", adventures_path, class: "text-white mr-8 font-sans font-semibold text-xl hover:bg-transparent hover:text-black hover:opacity-75" %>
+      <a href="#responsive-header" class="text-white font-sans font-semibold text-xl mr-8 hover:bg-transparent hover:text-black hover:opacity-75">
+        Nature
+      </a>
+      <a href="#responsive-header" class="text-white font-sans font-semibold mr-8 text-xl hover:bg-transparent hover:text-black hover:opacity-75">
+        Activity
+      </a>
+      <%= link_to "About", about_path, class: "text-white font-sans font-semibold mr-64 text-xl hover:bg-transparent hover:text-black hover:opacity-75" %>
+    </div>
+    <% if user_signed_in? %>
+        <p class="text-base font-semibold font-sans font-semibold text-xl ml-24 text-white">Welcome <i class="fa fa-user ml-4"></i> <%= link_to User.email_name(current_user.email), edit_user_registration_path, class: "font-sans font-semibold text-sm mr-4 hover:text-black hover:opacity-75"%></p>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "bg-transparent text-sm hover:bg-blue-500 text-white border-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"%>
+    <% else %>
+      <%= link_to "Login", new_user_session_path, class: "bg-transparent ml-64 mr-4 justify-right text-sm hover:bg-blue-500 text-white border-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "bg-transparent justify-right text-sm hover:bg-blue-500 text-white border-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" %>
+    <% end %>
+  </div>
+</nav>

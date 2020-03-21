@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wanderlust</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="page-container">
+   <div id="content-wrap">
+     <%= render 'welcome/navbar' %>
+      <% if notice %>
+        <div id="notice_wrapper">
+          <p class="notice"><%= notice %></p>
+        </div>
+      <% elsif alert %>
+        <div id="alert_wrapper">
+          <p class="alert"><%= alert %></p>
+        </div>
+      <% end %>
+     <%= yield %>
+   </div>
+   <footer id="footer">
+     <div class="footer w-full bg-black opacity-50 h-12 ">
+       <div class="pt-4 mr-4 font-serif text-sm text-white font-semibold text-right">
+         Copyright &copy; 2020 Wanderlust
+       </div>
+     </div>
+   </footer>
+  </div>
+  </body>
+</html>
