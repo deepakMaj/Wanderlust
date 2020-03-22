@@ -1,12 +1,12 @@
 <%= render 'search' %>
-<h2 class="text-4xl font-serif underline opacity-75 font-semibold text-center mt-4 mb-12 text-black">Adventure</h2>
+<h2 class="text-4xl font-serif underline opacity-75 font-semibold text-center mt-4 mb-12 text-black">Destination</h2>
 <div class="grid grid-cols-3 gap-4 ml-32 mb-16">
   <%= render 'formreq' %>
 </div>
-<% if !(@adventures.blank?) && @adventures.count != 6 %>
+<% if !(@adventures.blank?) %>
   <div class="flex justify-center">
     <div class="pagination text-sm text-blue-500 p-4 font-sans font-semibold tracking-widest border mb-16 w-auto rounded bg-gray-200">
-        <%= will_paginate @adventures %>
+        <%= will_paginate @destinations %>
     </div>
   </div>
 <% end %>

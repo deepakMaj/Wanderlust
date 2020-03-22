@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_072340) do
+ActiveRecord::Schema.define(version: 2020_03_22_064240) do
 
 # Could not dump table "adventures" because of following StandardError
 #   Unknown type '' for column 'hashtags'
@@ -21,6 +21,22 @@ ActiveRecord::Schema.define(version: 2020_03_21_072340) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["adventure_id"], name: "index_comments_on_adventure_id"
+  end
+
+  create_table "destinationcomments", force: :cascade do |t|
+    t.text "body"
+    t.integer "destination_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["destination_id"], name: "index_destinationcomments_on_destination_id"
+  end
+
+  create_table "destinations", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,4 +52,5 @@ ActiveRecord::Schema.define(version: 2020_03_21_072340) do
   end
 
   add_foreign_key "comments", "adventures"
+  add_foreign_key "destinationcomments", "destinations"
 end

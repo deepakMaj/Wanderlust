@@ -1,6 +1,6 @@
 <div class="flex justify-center mt-12 mb-64">
   <div class="container w-full max-w-xl bg-gray-100 shadow-xl rounded px-8 pt-6 pb-8 mb-4">
-    <h2 class="text-4xl font-serif font-semibold text-center mb-8 text-gray-700">Create</h2>
+    <h2 class="text-4xl font-serif font-semibold text-center mb-8 text-gray-700">Edit</h2>
       <%= form_for(@adventure, html:{role:"form"}) do |f|%>
         <div class="field mb-8">
           <%= f.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
@@ -9,10 +9,6 @@
         <div class="field mb-8">
           <%= f.label :url, class: "block text-gray-700 text-sm font-bold mb-2" %>
           <%= f.text_field :url, autofocus: true, placeholder: "URL", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
-        </div>
-        <div class="field mb-8">
-          <%= f.label :hashtags, class: "block text-gray-700 text-sm font-bold mb-2" %>
-          <%= f.text_field :hashtags, autofocus: true, placeholder: "Hashtag", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
         </div>
         <div class="field mb-8">
           <%= f.label :description, class: "block text-gray-700 text-sm font-bold mb-2 mt-4" %>

@@ -17,7 +17,7 @@ class AdventuresController < ApplicationController
   end
 
   def index
-    @adventures = Adventure.paginate(page: params[:page], per_page: 3)
+    @adventures = Adventure.paginate(page: params[:page], per_page: 6)
   end
 
   def new
@@ -52,7 +52,7 @@ class AdventuresController < ApplicationController
   private
 
     def adventure_params
-      params.require(:adventure).permit(:name, :url, :description, :hashtags)
+      params.require(:adventure).permit(:name, :url, :description)
     end
 
     def set_adventure
