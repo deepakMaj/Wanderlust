@@ -48,6 +48,11 @@ class DestinationsController < ApplicationController
     end
   end
 
+  def destroy
+    @destination.destroy
+    redirect_to destinations_path
+  end
+
 
   private
 

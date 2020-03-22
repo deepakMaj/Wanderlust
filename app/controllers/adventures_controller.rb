@@ -49,6 +49,11 @@ class AdventuresController < ApplicationController
     end
   end
 
+  def destroy
+    @adventure.destroy
+    redirect_to adventures_path
+  end
+
 
   private
 
