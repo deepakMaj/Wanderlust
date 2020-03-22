@@ -1,0 +1,16 @@
+<div class="flex justify-center mt-12 mb-16">
+  <div class="container w-full max-w-4xl bg-gray-100 shadow-xl rounded px-8 pt-6 pb-8 mb-4">
+    <h2 class="text-4xl font-serif font-semibold text-center mb-8 underline text-gray-700"><%= @park.name %></h2>
+      <%= image_tag(@park.url, class: "w-full pt-4 pl-16 pr-16 pb-8") %>
+      <p class="text-xl tracking-wider leading-7 font-serif text-black pr-16 pl-16"><%= @park.description %></p>
+  </div>
+</div>
+<div class="flex justify-center">
+  <div class="container w-full max-w-4xl bg-gray-100 shadow-xl rounded px-8 pt-6 pb-8 mb-4">
+    <h2 class="text-xl text-black font-sans font-bold mb-8"><%= @park.parkcomments.count %> Comments</h2>
+    <%= render @park.parkcomments %>
+  </div>
+</div>
+<div class="flex justify-center">
+  <%= render 'parkcomments/form' %>
+</div>

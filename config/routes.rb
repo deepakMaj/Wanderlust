@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :destinations do
     resources :destinationcomments
   end
+  resources :parks do
+    resources :parkcomments
+  end
   get '/search' => 'adventures#search', :as => 'search_page'
   get 'about', to: 'welcome#about'
 end

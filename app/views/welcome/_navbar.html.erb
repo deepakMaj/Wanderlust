@@ -7,9 +7,7 @@
     <div class="text-base font-semibold">
       <%= link_to "Adventure", adventures_path, class: "text-white mr-8 font-sans font-semibold text-xl hover:bg-transparent hover:text-black hover:opacity-75" %>
       <%= link_to "Destinations", destinations_path, class: "text-white mr-8 font-sans font-semibold text-xl hover:bg-transparent hover:text-black hover:opacity-75" %>
-      <a href="#responsive-header" class="text-white font-sans font-semibold mr-8 text-xl hover:bg-transparent hover:text-black hover:opacity-75">
-        Parks
-      </a>
+      <%= link_to "Parks", parks_path, class: "text-white mr-8 font-sans font-semibold text-xl hover:bg-transparent hover:text-black hover:opacity-75" %>
       <%= link_to "About", about_path, class: "text-white font-sans font-semibold mr-64 text-xl hover:bg-transparent hover:text-black hover:opacity-75" %>
     </div>
     <% if user_signed_in? %>

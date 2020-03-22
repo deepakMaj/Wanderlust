@@ -3,7 +3,7 @@
 <div class="grid grid-cols-3 gap-4 ml-32 mb-16">
   <%= render 'formreq' %>
 </div>
-<% if !(@adventures.blank?) %>
+<% if @destinations.count > 6 %>
   <div class="flex justify-center">
     <div class="pagination text-sm text-blue-500 p-4 font-sans font-semibold tracking-widest border mb-16 w-auto rounded bg-gray-200">
         <%= will_paginate @destinations %>
