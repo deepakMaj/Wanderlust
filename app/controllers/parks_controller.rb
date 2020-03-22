@@ -23,7 +23,8 @@ class ParksController < ApplicationController
     if current_user.email == "deepakmahajan269@gmail.com"
       @park = Park.new
     else
-      redirect_to root
+      flash[:notice] = "Only admin can perform those operations"
+      redirect_to root_path
     end
   end
 

@@ -23,7 +23,8 @@ class DestinationsController < ApplicationController
     if current_user.email == "deepakmahajan269@gmail.com"
       @destination = Destination.new
     else
-      redirect_to root
+      flash[:notice] = "Only admin can perform those operations"
+      redirect_to root_path
     end
   end
 
