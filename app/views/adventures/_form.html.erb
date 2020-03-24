@@ -3,11 +3,11 @@
     <%= render 'formreq' %>
   </div>
 <% elsif @adventures.count == 2 %>
-  <div class="grid grid-cols-2 gap-2 ml-64 mb-16">
+  <div class="grid grid-cols-2 gap-4 lg:ml-32 sm:ml-32  mb-16">
     <%= render 'formreq' %>
   </div>
 <% else %>
-  <div class="grid grid-cols-3 gap-4 ml-32 mb-16">
+  <div class="grid grid-cols-3 gap-4 lg:ml-32 sm:ml-4 sm:mr-4 mb-16">
     <%= render 'formreq' %>
   </div>
 <% end %>
