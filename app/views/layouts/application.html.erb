@@ -4,17 +4,18 @@
     <title>Wanderlust</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
   <body>
   <div id="page-container">
-   <div id="content-wrap">
-     <%= render 'welcome/navbar' %>
+    <%= render 'welcome/navbar' %>
+     <div id="content-wrap">
       <% if notice %>
         <div id="notice_wrapper">
           <p class="notice"><%= notice %></p>
@@ -27,8 +28,8 @@
      <%= yield %>
    </div>
    <footer id="footer">
-     <div class="footer w-full bg-black opacity-50 h-12 ">
-       <div class="pt-4 mr-4 font-serif text-sm text-white font-semibold text-right">
+     <div class="footer w-full bg-gray-800 h-12 opacity-100">
+       <div class="pt-4 mr-4 text-sm text-white text-center">
          Copyright &copy; 2020 Wanderlust
        </div>
      </div>

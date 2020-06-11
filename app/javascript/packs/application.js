@@ -23,6 +23,14 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   setTimeout(function(){
+    $('#flash-messages-section').fadeOut('slow', function(){
+      $(this).remove();
+    });
+  }, 3500);
+});
+
+$(document).ready(function(){
+  setTimeout(function(){
     $('#alert_wrapper').fadeOut('slow', function(){
       $(this).remove();
     });

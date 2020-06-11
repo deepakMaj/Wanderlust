@@ -1,15 +1,15 @@
-<div class="lg:mt-32 h-64 content container mx-auto px-4  w-3/5  shadow-2xl rounded opacity-100 bg-grey">
+<div class="mt-32 h-4/5 lg:h-64 container mx-auto px-4 w-4/5 lg:w-3/5 shadow-2xl rounded">
   <div>
-    <p class="font-serif md:text-xl text-grey-400 italic font-semibold p-8 leading-normal">
+    <p class="font-sans text-2xl lg:text-3xl text-grey-400 italic font-semibold p-5 leading-normal">
       Welcome to Wanderlust your own travel companion.
       For more information come and sign in the world of adventure, nature, attractions and much more...
     </p>
-    <div class="md:flex justify-center">
+    </div>
+    <div class="flex justify-center">
       <% if user_signed_in? %>
-        <%= link_to "Explore", adventures_path, class: "bg-transparent text-base hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded" %>
+        <%= link_to "Explore", adventures_path, class: "mb-4 bg-transparent text-base hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded" %>
       <% else %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "bg-transparent text-base hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "mb-4 bg-transparent text-base hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded" %>
       <% end %>
     </div>
-  </div>
 </div>

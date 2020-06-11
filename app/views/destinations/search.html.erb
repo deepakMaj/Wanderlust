@@ -1,8 +1,8 @@
 <div class="grid mb-8 mt-8">
   <%= form_tag(search_page_path, :method => "get", autocomplete: "off") do %>
     <div class="flex justify-center">
-      <%= search_field_tag :search, params[:search], placeholder: "Search by state or name of event", class: "font-sans font-semibold text-base text-gray-600 p-4 w-1/3 text-sm mr-3 mb-6 bg-white rounded-full focus:outline-none" %>
-      <%= button_tag "Search", class: "bg-blue-500 hover:bg-blue-700 font-sans font-semibold text-center h-8 pt-2 mt-2 text-base text-white p-3 font-bold rounded-full focus:outline-none focus:shadow-outline" %>
+      <%= search_field_tag :search, params[:search], placeholder: "Search by state or name of event", class: "font-sans font-semibold text-base text-gray-600 ml-2 p-4 lg:w-2/5 w-full text-sm mr-3 mb-6 bg-white rounded-full focus:outline-none" %>
+      <%= button_tag "Search", class: "bg-blue-500 hover:bg-blue-700 font-sans font-semibold text-center h-8 pt-2 mt-2 text-base text-white p-3 font-bold rounded-full mr-2 focus:outline-none focus:shadow-outline" %>
     </div>
   <% end %>
 </div>

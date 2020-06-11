@@ -15,7 +15,6 @@
  *= require commontator/application
  *= require unobtrusive_flash_ui
  */
-
  @import 'font-awesome';
 
  body{
@@ -24,15 +23,34 @@
    background-size: cover;
  }
 
- @media (min-width: 640px) {
-   .content{
-     margin-top: 400px;
-   }
+ a{
+   -webkit-tap-highlight-color: transparent;
+ }
+
+ @media (max-width: 640px) {
    #notice_wrapper{
-       width: 50%;
+     border-radius: 6px;
+     margin-top: 10vh;
+     margin-left: 2vh;
+     margin-right: 2vh;
+     border-style: inset;
+     background: rgba(95, 167, 163, 0.85);
+     padding: 1.25rem 0;
+     p{
+       text-align: center;
+       margin: 0;
+       font-size: 18px;
+       font-weight: 400;
+       color: #FFFFFF;
+       letter-spacing: 1px;
+     }
+   }
+
+   #alert_wrapper{
        border-radius: 6px;
-       margin-left: 250px;
-       margin-top: 80px;
+       margin-top: 10vh;
+       margin-left: 2vh;
+       margin-right: 2vh;
        border-style: inset;
        background: rgba(95, 167, 163, 0.85);
        padding: 1.25rem 0;
@@ -43,29 +61,9 @@
          font-weight: 400;
          color: #FFFFFF;
          letter-spacing: 1px;
-       }
      }
-
-     #alert_wrapper{
-         width: 50%;
-         border-radius: 6px;
-         margin-top: 80px;
-         margin-left: 250px;
-         border-style: inset;
-         background: rgba(95, 167, 163, 0.85);
-         padding: 1.25rem 0;
-         p{
-           text-align: center;
-           margin: 0;
-           font-size: 18px;
-           font-weight: 400;
-           color: #FFFFFF;
-           letter-spacing: 1px;
-       }
-     }
+   }
  }
-
-
 
  #page-container {
    position: relative;
@@ -98,6 +96,24 @@
 
 @media (min-width: 1024px) {
   #notice_wrapper{
+    width: 50%;
+    border-radius: 6px;
+    margin-left: 330px;
+    margin-top: 50px;
+    border-style: inset;
+    background: rgba(95, 167, 163, 0.85);
+    padding: 1.25rem 0;
+    p{
+      text-align: center;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+  }
+
+  #alert_wrapper{
       width: 50%;
       border-radius: 6px;
       margin-left: 330px;
@@ -112,26 +128,6 @@
         font-weight: 400;
         color: #FFFFFF;
         letter-spacing: 1px;
-      }
-    }
-
-    #alert_wrapper{
-        width: 50%;
-        border-radius: 6px;
-        margin-left: 330px;
-        border-style: inset;
-        background: rgba(95, 167, 163, 0.85);
-        padding: 1.25rem 0;
-        p{
-          text-align: center;
-          margin: 0;
-          font-size: 18px;
-          font-weight: 400;
-          color: #FFFFFF;
-          letter-spacing: 1px;
-      }
-    }
-    .content{
-      margin-top: 0px;
     }
   }
+}
